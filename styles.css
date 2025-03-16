@@ -1,0 +1,427 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.063rem;
+
+  /* Hex color mode */
+  --first-color: #F08E92;
+  --second-colour: #209294;
+  --content-colour: #5F4842;
+  --white-color: #FFFFFF;
+
+
+  /*========== Font and typography ==========*/
+  --body-font: "Roboto Condensed", sans-serif;
+  --name-font: "Jockey One", sans-serif;
+  --name-biggest-font-size: 6.25rem;
+  --name-font-size: 5rem;
+  --h1-font-size: 1.875rem;
+  --h2-font-size: 1.563rem;
+  --normal-font-size: 1.25rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/* @media screen and (min-width: 968px) {
+  :root {
+    --name-biggest-font-size: 3.125rem;
+    --name-font-size: 1.875rem;
+    --h1-font-size: 0.75rem;
+    --h2-font-size: 0.625rem;
+    --normal-font-size: 0.5rem;
+  }
+} */
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* background-color: #000; */
+
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--first-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--title-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+.main {
+  overflow-x: hidden;
+  margin-top: var(--header-height);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 150%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  background-color: var(--second-colour);
+  /* Solid teal background */
+  height: var(--header-height);
+  position: fixed;
+  /* Optional: keeps header at top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 0;
+  /* Space between links */
+}
+
+.nav__item a {
+  height: 100%;
+  color: var(--white-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  transition: color 0.3s ease;
+}
+
+.nav__item a:hover {
+  color: #e0e0e0;
+  /* Lighter shade on hover */
+}
+
+/*=============== HEADER Section===============*/
+.home {
+  position: relative;
+  /* Ensures the image can be positioned within this section */
+  width: 100%;
+  /* Full width of the viewport */
+  height: 100vh;
+  /* Full height of the viewport */
+  overflow: hidden;
+  /* Prevents overflow if the image exceeds bounds */
+  padding: 0;
+  /* Removes any padding that might cause white space */
+}
+
+.home_img {
+  width: 100%;
+  /* Fills the width of the container */
+  height: 100%;
+  object-fit: cover;
+  /* Scales the image to cover the container, cropping if necessary */
+  position: absolute;
+  /* Positions the image to fill the section */
+  top: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+.hero-title {
+  font-size: var(--name-biggest-font-size);
+  font-family: var(--name-font);
+  font-weight: bold;
+  color: var(--first-color);
+  /* Matches the pink color from the image */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+
+}
+
+.hero-subtitle {
+  font-size: var(--h1-font-size);
+  color: var(--second-colour);
+  /* White color for the subtitle */
+}
+
+/*=============== Information Section===============*/
+.personal-info {
+  max-width: 150%;
+  width: 100%;
+}
+
+.image-container {
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.cartoon_photo,
+.real_photo {
+  width: 364.27px;
+  height: 451.59px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.photo-left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cartoon_photo {
+  z-index: 2;
+  transform: translate(-10%, -50%);
+  transition: all 0.4s ease
+}
+
+.real_photo {
+  z-index: 1;
+  transform: translate(-50%, -50%) rotate(-19deg);
+  transition: all 0.4s ease
+}
+
+.photo-left {
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+
+  &:hover {
+    .cartoon_photo {
+      z-index: 1;
+      transform: translate(-50%, -50%) rotate(-19deg);
+      transition: all 0.4s ease
+    }
+
+    .real_photo {
+      z-index: 2;
+      transform: translate(-10%, -50%);
+      transition: all 0.4s ease
+    }
+  }
+}
+
+
+.info-righ {
+  width: 622.91px;
+  padding-left: 0;
+}
+
+.text-card {
+  width: 687.09px;
+  color: #F08E92;
+
+}
+
+.text-header h1 {
+  font-size: var(--name-font-size);
+  font-family: var(--name-font);
+  color: #F08E92;
+}
+
+.text-header p {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  margin-bottom: 0;
+}
+
+.contact {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact p {
+  font-size: var(--normal-font-size);
+  margin: 2px 0;
+  color: var(--first-color);
+}
+
+.contact i {
+  margin-right: 5px;
+  background-color: var(--body-color);
+  font-size: 26px;
+}
+
+.skills {
+  background-color: var(--white-color);
+  padding: 10px;
+}
+
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  color: var(--second-colour);
+}
+
+.skill-text {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  /* 防止縮小 */
+}
+
+.skill-item span {
+  font-size: var(--h2-font-size);
+  margin-left: 5px;
+}
+
+.skill-item-icon {
+  font-size: 27px;
+}
+
+.progress-bar {
+  width: 154px;
+  height: 14px;
+  background-color: #EDEDED;
+  border: 1px solid #209294;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #209294;
+  border-radius: 5px;
+  width: 0;
+  /* Start at 0% */
+  animation: progressAnimation 2s ease forwards;
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: var(--progress-width);
+    /* Use the custom property */
+  }
+}
+
+.qr-code {
+  margin: 20px 0;
+  text-align: center;
+
+}
+
+.qr-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.qr-code a {
+  text-decoration: none;
+  color: var(--second-colour);
+  display: inline-block;
+}
+
+.qr-code p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.qr-code a:hover .qr-image {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.qr-code a:hover p {
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.skillandqr {
+  align-items: center;
+}
+
+.software {
+  display: flex;
+  justify-content: flex-start;
+  gap: 14px;
+
+}
+
+.software-icon {
+  width: 63.92px;
+  height: 63.92px;
+}
