@@ -1,0 +1,924 @@
+@import "../styles.css";
+
+/*=============== Cover Section ===============*/
+.cover img {
+  width: 100%;
+}
+
+/*=============== Page Introduction Section ===============*/
+.page_introduction {
+  background-color: var(--white-color);
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: var(--body-font);
+}
+
+.page_introduction h1 {
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+  font-family: var(--name-font);
+}
+
+.page_introduction .subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-bottom: 20px;
+}
+
+.page_introduction .description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 30px;
+}
+
+.page_introduction .role-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.institutions-consultant {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.institutions-consultant .consultant p {
+  color: var(--content-colour);
+  font-size: var(--normal-font-size);
+}
+
+.page_introduction .role,
+.page_introduction .tools {
+  text-align: left;
+}
+
+.page_introduction .role h3,
+.page_introduction .tools h3 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 5px;
+}
+
+.page_introduction .role-columns {
+  display: flex;
+  gap: 20px;
+  /* Space between the two columns of roles */
+}
+
+.page_introduction .role-columns ol {
+  margin: 0;
+  padding-left: 20px;
+  /* Adjust padding for the list numbers */
+  list-style-position: outside;
+}
+
+.page_introduction .role-columns li {
+  font-size: var(--normal-font-size);
+  color: var(--black-color);
+}
+
+.page_introduction .tools .tool-icons {
+  display: flex;
+  gap: 10px;
+  /* Space between tool icons */
+}
+
+.page_introduction .tools img {
+  width: var(--tool-icon-size);
+  height: var(--tool-icon-size);
+  /* Ensure icons are square */
+}
+
+.page_introduction .institutions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.page_introduction .institutions h3 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+}
+
+.page_introduction .institutions .institution-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.page_introduction .institutions .institution {
+  text-align: left;
+}
+
+.page_introduction .institutions img {
+  height: var(--institution-logo-height);
+  margin-bottom: 5px;
+}
+
+.page_introduction .institutions p {
+  font-size: var(--small-font-size);
+  color: var(--content-colour);
+}
+
+/*=============== Target User Section ===============*/
+.target-user {
+  background-color: var(--white-color);
+  padding: 90px 20px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: var(--body-font);
+
+}
+
+.target-user .text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.target-user h2 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 15px;
+}
+
+.target-user ul {
+  list-style: none;
+  margin-bottom: 30px;
+  counter-reset: item;
+}
+
+.target-user ul li {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.target-user ul li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  color: var(--content-colour);
+}
+
+.target-user .project-statement h3 {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+}
+
+.target-user .project-statement p {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+}
+
+.target-user .mockups {
+  flex: 1;
+  position: relative;
+  text-align: right;
+  margin-bottom: 100px;
+}
+
+.target-user .mockups img {
+  height: auto;
+}
+
+.target-user .mockups img:first-child {
+  position: relative;
+  right: 140px;
+  top: 80px;
+  z-index: 0;
+}
+
+.target-user .mockups img:last-child {
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+}
+
+/*=============== Project Objectives Section ===============*/
+.project-objectives {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.project-objectives h2 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 30px;
+}
+
+.objectives-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.objectives-icons {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+  margin: 0 auto;
+}
+
+.objective-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+
+  text-align: center;
+}
+
+.objective-icon img {
+  height: 70px;
+  width: auto;
+  margin-bottom: 10px;
+  color: var(--first-color);
+}
+
+.icon-title {
+  color: var(--first-color);
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+}
+
+.objectives-content {
+  width: 691px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+}
+
+.objective-details {
+  height: 120px;
+  /* Adjust to match the height of icons + title */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.objective-details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.objective-details ul li {
+  font-size: var(--small-font-size);
+  color: var(--content-colour);
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.objective-details ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--first-color);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .objectives-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .objectives-icons {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .objective-details {
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .objective-details ul li {
+    text-align: left;
+  }
+}
+
+/*=============== About Visual Impairment Section ===============*/
+.visual-impairment {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.visual-impairment h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.visual-impairment h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+.visual-impairment h3,
+.accessible-ui h3,
+.assistive-gesture h3 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin: 30px 0 20px;
+  text-align: left;
+}
+
+/* Types of Visual Impairment styles */
+.impairment-types {
+  margin-bottom: 60px;
+}
+
+.types-container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+.ui-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.impairment-list {
+  list-style: none;
+  text-align: left;
+  flex: 1;
+}
+
+.impairment-list li {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+}
+
+.design-principles li {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin: 10px 0;
+}
+
+.impairment-icons {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.accessible-ui {
+  margin-top: 60px;
+}
+
+.ui-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
+.ui-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.design-principles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .ui-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ui-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .design-principles {
+    width: 100%;
+    text-align: center;
+  }
+
+  .design-principles li {
+    margin: 8px 0;
+    font-size: calc(var(--normal-font-size) * 0.9);
+  }
+}
+
+.gesture-imag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/*=============== Design Step Section ===============*/
+.design-step {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.design-step h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.design-step h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+.design-step .color-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+.design-step .color-circles .circle {
+  width: 151.26px;
+  height: 151.26px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.design-step .color-circles .circle-text {
+  position: absolute;
+  bottom: -50px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: var(--h2-font-size);
+}
+
+.design-step .color-circles .blue {
+  background-color: #203E71;
+  z-index: 0;
+  color: #203E71;
+}
+
+.design-step .color-circles .blue .circle-text {
+  color: #203E71;
+}
+
+.design-step .color-circles .coral {
+  background-color: #E68A87;
+  margin-left: -20px;
+  z-index: 1;
+}
+
+.design-step .color-circles .coral .circle-text {
+  color: #E68A87;
+}
+
+.design-step .color-circles .yellow {
+  background-color: #F5D87D;
+  margin-left: -20px;
+  z-index: 2;
+}
+
+.design-step .color-circles .yellow .circle-text {
+  color: #F5D87D;
+}
+
+.design-step .color-circles .green {
+  background-color: #5A895A;
+  margin-left: -20px;
+  z-index: 3;
+}
+
+.design-step .color-circles .green .circle-text {
+  color: #5A895A;
+}
+
+/*=============== User Journey Section ===============*/
+.user-journey {
+  padding: 40px 20px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.user-journey h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.user-journey h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+/* Flowchart */
+.flowchart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+
+.flowchart .box {
+  background-color: var(--second-colour);
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 20px;
+  width: 189px;
+  text-align: center;
+  font-size: var(--h2-font-size);
+  position: relative;
+  z-index: 1;
+}
+
+.flowchart::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4.5px;
+  background-color: var(--second-colour);
+  z-index: 0;
+  top: 50px;
+  bottom: -50px;
+  transform: translateX(-50%);
+}
+
+/* Journey Steps */
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.journey-step {
+  margin-bottom: 80px;
+  width: 100%;
+  position: relative;
+}
+
+/* Adjust journey-step margin to account for the vertical line */
+.journey-step {
+  margin-bottom: 0;
+}
+
+.step-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.step-info {
+  width: 45%;
+  text-align: left;
+}
+
+.step-info-right {
+  text-align: right;
+}
+
+.step-info .step-number,
+.vertical-info .step-number {
+  font-size: 198px;
+  color: var(--first-color);
+  font-weight: bold;
+  font-family: var(--pages-stepnumb-font);
+  line-height: 1;
+}
+
+.step-title {
+  margin-bottom: 10px;
+}
+
+.step-title h3,
+.vertical-info .step-title h3 {
+  font-size: var(--zh-font-size);
+  color: var(--first-color);
+  font-family: var(--name-font);
+  margin-bottom: 5px;
+}
+
+.step-title h4,
+.vertical-info .step-title h4 {
+  font-size: var(--en-font-size);
+  color: var(--first-color);
+  font-family: var(--name-font);
+  font-weight: normal;
+}
+
+.step-description,
+.vertical-info .step-description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 20px;
+}
+
+.step-image {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-image img {
+  max-width: 200px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+
+/* Vertical Layout for Steps 3 and 4 */
+.vertical-layout .step-content {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vertical-layout .step-info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.vertical-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.title-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.vertical-info .step-description {
+  text-align: left;
+  margin: 0;
+}
+
+/* Left and Right Image Layouts */
+.left-image .step-content,
+.right-image .step-content {
+  flex-direction: row;
+}
+
+/*=============== double-phone ===============*/
+.double-phone {
+  flex: 1;
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 90px;
+}
+
+
+.double-phone img:first-child {
+  position: relative;
+  z-index: 1;
+  left: 120px;
+  top: -50px;
+}
+
+.double-phone img:last-child {
+  position: absolute;
+  left: 100px;
+  top: 70px;
+  z-index: 0;
+}
+
+/*=============== three-phonee ===============*/
+.three-phonee {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  width: 65%;
+
+}
+
+.three-phone img {
+  position: relative;
+  height: auto;
+
+}
+
+.three-phonee img::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  z-index: -1;
+}
+
+/* Bottom protrusion (sticks out downward) */
+.three-phone img::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+
+  z-index: -1;
+}
+
+.three-phone .phone-container {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 350px;
+  gap: 10px;
+
+}
+
+.three-phone .phone:nth-child(1) {
+  transform: translateY(240px);
+}
+
+.three-phone .phone:nth-child(2) {
+  transform: translateY(-20px);
+}
+
+.three-phone .phone:nth-child(3) {
+  transform: translateY(340px);
+}
+
+/*=============== six-phone ===============*/
+.six-phone {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.six-phone img {
+  position: relative;
+  gap: 5px;
+}
+
+.phone-container {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 350px;
+  gap: 10px;
+}
+
+.six-phone .phone:nth-child(1),
+.six-phone .phone:nth-child(3),
+.six-phone .phone:nth-child(5) {
+  transform: translateY(0px);
+}
+
+.six-phone .phone:nth-child(2),
+.six-phone .phone:nth-child(4),
+.six-phone .phone:nth-child(6) {
+  transform: translateY(60px);
+}
+
+/*=============== five-phone ===============*/
+.five-phone {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.five-phone img {
+  position: relative;
+  gap: 20px;
+}
+
+
+.five-phone .phone:nth-child(1),
+.five-phone .phone:nth-child(5) {
+  transform: translateY(160px);
+}
+
+.five-phone .phone:nth-child(2),
+.five-phone .phone:nth-child(4) {
+  transform: translateY(80px);
+}
+
+
+/*=============== Exhibition Section ===============*/
+.exhibition {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.exhibition h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.exhibition h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+.exhibition h3 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin: 30px 0 20px;
+  text-align: left;
+}
+
+.graduation-exhibition p {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  text-align: left;
+}
+
+.impairment-types {
+  margin-bottom: 60px;
+}
+
+.types-container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin: 0 auto;
+}

@@ -1,0 +1,1058 @@
+@import "../styles.css";
+
+/*=============== Cover Section ===============*/
+.cover img {
+  width: 100%;
+}
+
+/*=============== Page Introduction Section ===============*/
+.page_introduction {
+  background-color: var(--white-color);
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: var(--body-font);
+}
+
+.page_introduction h1 {
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+  font-family: var(--name-font);
+}
+
+.page_introduction .subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-bottom: 20px;
+}
+
+.page_introduction .description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 30px;
+}
+
+.page_introduction .role-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.page_introduction .role,
+.page_introduction .tools {
+  text-align: left;
+}
+
+.page_introduction .role h3,
+.page_introduction .tools h3 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 5px;
+}
+
+.page_introduction .role-columns {
+  display: flex;
+  gap: 20px;
+  /* Space between the two columns of roles */
+}
+
+.page_introduction .role-columns ol {
+  margin: 0;
+  padding-left: 20px;
+  /* Adjust padding for the list numbers */
+  list-style-position: outside;
+}
+
+.page_introduction .role-columns li {
+  font-size: var(--normal-font-size);
+  color: var(--black-color);
+}
+
+.page_introduction .tools .tool-icons {
+  display: flex;
+  gap: 10px;
+  /* Space between tool icons */
+}
+
+.page_introduction .tools img {
+  width: var(--tool-icon-size);
+  height: var(--tool-icon-size);
+  /* Ensure icons are square */
+}
+
+.page_introduction .institutions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.page_introduction .institutions h3 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+}
+
+.page_introduction .institutions .institution-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.page_introduction .institutions .institution {
+  text-align: left;
+}
+
+.page_introduction .institutions img {
+  height: var(--institution-logo-height);
+  margin-bottom: 5px;
+}
+
+.page_introduction .institutions p {
+  font-size: var(--small-font-size);
+  color: var(--content-colour);
+}
+
+/*=============== Target User Section ===============*/
+.target-user {
+  background-color: var(--white-color);
+  padding: 90px 20px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: var(--body-font);
+
+}
+
+.target-user .text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.target-user h2 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 15px;
+}
+
+.target-user ul {
+  list-style: none;
+  margin-bottom: 30px;
+  counter-reset: item;
+}
+
+.target-user ul li {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.target-user ul li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  color: var(--content-colour);
+}
+
+.target-user .project-statement h3 {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+}
+
+.target-user .project-statement p {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+}
+
+.target-user .mockups {
+  flex: 1;
+  position: relative;
+  text-align: right;
+  margin-bottom: 100px;
+}
+
+.target-user .mockups img {
+  height: auto;
+}
+
+.target-user .mockups img:first-child {
+  position: relative;
+  right: 120px;
+  top: -70px;
+  z-index: 1;
+}
+
+.target-user .mockups img:last-child {
+  position: absolute;
+  left: 180px;
+  top: 100px;
+  z-index: 0;
+}
+
+.target-user .promotion {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.target-user .promotion h3 {
+  font-family: var(--name-font);
+  font-size: 40px;
+}
+
+.target-user .promotion-items {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+}
+
+.target-user .promotion-item {
+  text-align: center;
+
+}
+
+.target-user .promotion-item img {
+  width: 100%;
+  height: auto;
+}
+
+.target-user .promotion-item p {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-top: 10px;
+}
+
+/*=============== Music Video  Section ===============*/
+.music-video-step {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.music-video-step h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.music-video-step h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+.music-video-step .music-video-description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  max-width: 757px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.youtube_ref {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 20px 0;
+}
+
+.youtube_ref iframe {
+  max-width: 100%;
+}
+
+.youtube_ref .youtube_link {
+  text-align: center;
+}
+
+.youtube_ref .youtube_link a {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: #5F4842;
+}
+
+.youtube_ref .youtube_link a:hover {
+  text-decoration: underline;
+  color: rgb(105, 105, 105);
+}
+
+/* Lyrics Section Styling */
+.lyric {
+  margin-top: 50px;
+}
+
+/*=============== Music Festival Section===============*/
+.music-festival {
+  padding: 40px 20px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.music-festival h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.music-festival h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+.music-festival .music-festiva-description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  max-width: 757px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.app-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .music-festival h2 {
+    font-size: 2rem;
+  }
+
+  .feature {
+    min-width: 100%;
+  }
+}
+
+/* App Features Section */
+.app-features {
+  margin-bottom: 150px;
+  width: 100%;
+  position: relative;
+}
+
+.app-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px;
+  /* Default layout: content on left, images on right */
+  flex-direction: row;
+}
+
+.app-info {
+  width: 45%;
+  text-align: left;
+}
+
+.app-info-right {
+  text-align: right;
+}
+
+.app-features-title {
+  margin-bottom: 10px;
+}
+
+.app-features-title h3 {
+  font-size: var(--zh-font-size);
+  color: var(--first-color);
+  font-family: var(--name-font);
+}
+
+.app-features-title h4 {
+  font-size: var(--en-font-size);
+  color: var(--first-color);
+  font-family: var(--name-font);
+}
+
+.app-features-description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 20px;
+}
+
+.app-features-image {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* For the four phone layout */
+.four-phone {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  width: 65%;
+}
+
+.four-phone img {
+  position: relative;
+  height: auto;
+}
+
+.four-phone img::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: -1;
+}
+
+/* Bottom protrusion (sticks out downward) */
+.four-phone img::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: -1;
+}
+
+
+.phone-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.phone:nth-child(1),
+.phone:nth-child(3) {
+  transform: translateY(0px);
+}
+
+.phone:nth-child(2),
+.phone:nth-child(4) {
+  transform: translateY(70px) !important;
+}
+
+/* Story Section */
+.story-section {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  width: 100%;
+  position: relative;
+}
+
+.story-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 40px;
+  /* Content on right, image on left */
+  flex-direction: row-reverse;
+}
+
+.story-info {
+  width: 45%;
+  text-align: left;
+}
+
+.story-title {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-title h3 {
+  font-size: var(--zh-font-size);
+  color: #ff7b7b;
+  /* Pink color from the image */
+  font-family: var(--name-font);
+  margin-bottom: 5px;
+}
+
+.story-title h4 {
+  font-size: var(--en-font-size);
+  color: #ff7b7b;
+  /* Pink color from the image */
+  font-family: var(--name-font);
+  font-weight: normal;
+}
+
+.story-description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 20px;
+}
+
+.story-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hakka-cuisine {
+  margin-top: 20px;
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .story-content {
+    flex-direction: column !important;
+    padding: 0 20px;
+  }
+
+  .story-info,
+  .story-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .story-title {
+    align-items: center;
+  }
+
+  .story-image img {
+    max-width: 100%;
+  }
+}
+
+/*=============== Festival Journey Section===============*/
+.festival-journey {
+  padding: 40px 20px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.festival-journey h2 {
+  font-family: var(--name-font);
+  font-size: 50px;
+}
+
+.dai-hak-chi_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  height: 500px;
+  margin-bottom: 220px;
+}
+
+/* Journey Steps */
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.journey-step {
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+/* Step Content Layout */
+.step-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Left and Right Image Variations */
+.left-image .step-content {
+  flex-direction: row;
+}
+
+.right-image .step-content {
+  flex-direction: row-reverse;
+}
+
+/* Step Number Styling */
+.step-number {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #f99;
+  /* Light pink color seen in the image */
+  line-height: 0.8;
+  margin-bottom: 10px;
+  font-family: var(--pages-stepnumb-font);
+}
+
+
+
+/* Step Information */
+.step-info {
+  text-align: left;
+  flex: 1;
+  padding: 20px;
+}
+
+.step-info-right {
+  text-align: right;
+  flex: 1;
+  padding: 20px;
+}
+
+/* Title Styling */
+.step-title h3 {
+  font-size: 1.8rem;
+  color: #f99;
+  margin-bottom: 5px;
+  font-family: var(--name-font);
+}
+
+.step-title h4 {
+  font-size: 1.4rem;
+  color: #f99;
+  margin-bottom: 15px;
+  font-family: var(--name-font);
+  font-weight: normal;
+}
+
+/* Description Styling */
+.step-description {
+  font-size: var(--normal-font-size);
+  line-height: 1.6;
+  color: var(--content-colour);
+  margin-bottom: 15px;
+}
+
+/* Mission List Styling */
+.mission-list {
+  color: var(--content-colour);
+  font-size: var(--normal-font-size);
+}
+
+.mission-list ol {
+  color: var(--content-colour);
+}
+
+/* Image Styling */
+.step-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-image img {
+  max-width: 100%;
+}
+
+/* Phone grid layout for multiple screenshots */
+.phone-grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+}
+
+
+.phone-grid img {
+  height: auto;
+  position: absolute;
+}
+
+.phone-grid img:nth-child(1) {
+  transform: rotate(-13.94deg) translateX(-100px) translateY(-100px);
+  z-index: 0;
+}
+
+.phone-grid img:nth-child(2) {
+  transform: rotate(10.22deg) translateX(60px) translateY(-100px);
+  z-index: 1;
+}
+
+.phone-grid img:nth-child(3) {
+  transform: rotate(4.86deg) translateX(-90px) translateY(150px);
+  z-index: 2;
+}
+
+.phone-grid img:nth-child(4) {
+  transform: rotate(-9.77deg) translateX(70px) translateY(165px);
+  z-index: 3;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .step-content {
+    flex-direction: column !important;
+  }
+
+  .step-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  .step-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .step-number {
+    font-size: 4rem;
+  }
+
+  .step-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .step-title h4 {
+    font-size: 1.2rem;
+  }
+
+}
+
+/*=============== four-photo2 (vertical stack) ===============*/
+.four-photo2 {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.four-photo2 img {
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Top image (blue background with yellow creature) */
+.four-photo2 img:nth-child(1) {
+  position: relative;
+  z-index: 1;
+  right: 100px;
+  top: 200px;
+}
+
+/* Middle image (person) */
+.four-photo2 img:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  left: 50px;
+  margin-top: -40px;
+  top: 200px;
+}
+
+/* Bottom image (blue background with multiple creatures) */
+.four-photo2 img:nth-child(3) {
+  position: relative;
+  z-index: 3;
+  margin-top: -40px;
+  /* Negative margin to create overlap */
+  right: 80px;
+  top: 180px;
+}
+
+.four-photo2 img:nth-child(4) {
+  position: relative;
+  z-index: 3;
+  margin-top: -40px;
+  /* Negative margin to create overlap */
+  right: 350px;
+  top: 30px;
+}
+
+/*=============== food-grid (vertical stack) ===============*/
+.food-grid {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.food-grid img {
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Top image (blue background with yellow creature) */
+.food-grid img:nth-child(1) {
+  position: relative;
+  z-index: 0;
+  right: 70px;
+  top: 70px;
+}
+
+/* Middle image (person) */
+.food-grid img:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  left: 80px;
+  margin-top: -40px;
+  /* Negative margin to create overlap */
+  top: 70px;
+}
+
+/* Bottom image (blue background with multiple creatures) */
+.food-grid img:nth-child(3) {
+  position: relative;
+  z-index: 1;
+  margin-top: -40px;
+  right: 50px;
+  top: 60px;
+}
+
+.food-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  height: 500px;
+  margin-bottom: 100px;
+}
+
+/* Vertical Layout for Steps 3 and 4 */
+.vertical-layout .step-content {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vertical-layout .step-info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.vertical-layout-left .step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.vertical-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.vertical-layout-left .step-info {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+  /* Ensure all text within step-info is left-aligned */
+}
+
+.vertical-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.title-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.vertical-info .step-description {
+  text-align: left;
+  margin: 0;
+}
+
+.journey-step .vertical-info .step-description-center {
+  text-align: center;
+  color: var(--content-colour);
+  font-size: var(--normal-font-size);
+  width: 100%;
+}
+
+
+/* Left and Right Image Layouts */
+.left-image .step-content,
+.right-image .step-content {
+  flex-direction: row;
+}
+
+
+.double-phone2 {
+  position: relative;
+  align-items: center;
+  max-width: 500px;
+  width: 30%;
+  height: 250px;
+  margin-bottom: 80px;
+}
+
+/* Styling for the images inside double-phone2 */
+.double-phone2 img {
+  max-width: 228.28px;
+  width: 100%;
+  position: absolute;
+}
+
+/* First phone (left) */
+.double-phone2 img:first-child {
+  transform: rotate(-11.18deg);
+  right: 100px;
+  z-index: 1;
+}
+
+/* Second phone (right) */
+.double-phone2 img:last-child {
+  transform: rotate(14.71deg);
+  left: 200px;
+  top: 20px;
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .double-phone2 {
+    height: 350px;
+    /* Reduce height for smaller screens */
+  }
+
+  .double-phone2 img {
+    max-width: 160px;
+    /* Smaller images on mobile */
+  }
+
+  .double-phone2 img:last-child {
+    margin-left: -40px;
+    /* Adjust overlap for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .double-phone2 {
+    height: 300px;
+  }
+
+  .double-phone2 img {
+    max-width: 140px;
+  }
+
+  .double-phone2 img:last-child {
+    margin-left: -30px;
+    /* Further adjust overlap */
+  }
+}
+
+/*=============== Booth Section===============*/
+.booth-section {
+  padding: 40px 20px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.booth-section h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.booth-section h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+.booth-photo {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.booth-photo img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}

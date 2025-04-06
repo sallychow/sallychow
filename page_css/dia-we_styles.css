@@ -1,0 +1,1069 @@
+@import "../styles.css";
+
+/*=============== Cover Section ===============*/
+.cover img {
+  width: 100%;
+}
+
+/*=============== Page Introduction Section ===============*/
+.page_introduction {
+  background-color: var(--white-color);
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: var(--body-font);
+}
+
+.page_introduction h1 {
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+  font-family: var(--name-font);
+}
+
+.page_introduction .subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+}
+
+.page_introduction .description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+}
+
+.page_introduction .role-tools {
+  display: flex;
+  margin: 70px auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  gap: 20px;
+}
+
+.page_introduction .role,
+.page_introduction .tools {
+  text-align: left;
+}
+
+.page_introduction .role h3,
+.page_introduction .tools h3 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 5px;
+}
+
+.page_introduction .role-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.page_introduction .role-columns ol {
+  margin: 0;
+  padding-left: 20px;
+  list-style-position: outside;
+}
+
+.page_introduction .role-columns li {
+  font-size: var(--normal-font-size);
+  color: var(--black-color);
+}
+
+.page_introduction .tools .tool-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.page_introduction .tools img {
+  width: var(--tool-icon-size);
+  height: var(--tool-icon-size);
+}
+
+/*=============== QR Code Section ===============*/
+.qr-code {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 700px;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.qr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.pet-img {
+  height: 70px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.qr-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-text {
+  margin-top: 5px;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  text-align: center;
+  font-weight: 500;
+}
+
+.qr-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.qr-item a:hover {
+  text-decoration: underline;
+}
+
+.qr-text {
+  margin-top: 5px;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive adjustments - maintain horizontal layout with scroll if needed */
+@media screen and (max-width: 768px) {
+  .qr-code {
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+
+  .qr-item {
+    min-width: 180px;
+    margin: 0 10px;
+  }
+}
+
+/*=============== Target User Section ===============*/
+.target-user {
+  background-color: var(--white-color);
+  padding: 90px 20px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: var(--body-font);
+
+}
+
+.target-user .text-content {
+  flex: 2;
+  text-align: left;
+}
+
+.target-user h2 {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 15px;
+}
+
+.target-user ul {
+  list-style: none;
+  margin-bottom: 30px;
+  counter-reset: item;
+}
+
+.target-user ul li {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.target-user ul li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  color: var(--content-colour);
+}
+
+.target-user .project-statement h3 {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+}
+
+.target-user .project-statement p {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+}
+
+.target-user .mockups {
+  flex: 1;
+  position: relative;
+  text-align: right;
+  margin-bottom: 100px;
+}
+
+.target-user .mockups img {
+  height: 357px;
+  width: auto;
+}
+
+.target-user .mockups img:first-child {
+  position: relative;
+  right: 270px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.target-user .mockups img:last-child {
+  position: absolute;
+  left: 60px;
+  top: 70px;
+  z-index: 0;
+}
+
+/*=============== User Research Section ===============*/
+.user-research {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: var(--black-color);
+}
+
+/* Header Styles */
+.user-research h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.user-research h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+/* Research Grid Layout */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Individual Research Item */
+.research-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon Placeholder Styles */
+.research-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+/* Research Content Styles */
+.research-content {
+  flex: 1;
+}
+
+.research-title {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.research-description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  line-height: 1.4;
+}
+
+.research-item .research-description {
+  margin: 0;
+}
+
+/* Conclusion Section */
+.conclusion {
+  position: relative;
+  text-align: center;
+  padding-top: 260px;
+  margin-top: 20px;
+}
+
+.wavy-line {
+  --s: 19px;
+  --b: 6px;
+  --m: 0.8;
+  background: var(--first-color);
+  --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+  height: calc(2*var(--R));
+  width: 500px;
+  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+  mask:
+    radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+    radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)), var(--_g)) 50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+  margin-left: auto !important;
+}
+
+.arrow {
+  position: absolute;
+  width: 219px;
+  height: 244.48px;
+  top: 0;
+  left: 50%;
+  background-image: url('../assets/pages/dia-we/arrow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.conclusion h2 {
+  margin: 0 auto;
+  font-size: 50px;
+  color: var(--first-color);
+  font-family: var(--name-font);
+  font-weight: normal;
+  text-align: center;
+}
+
+.conclusion-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-number {
+    font-size: 2.8rem;
+  }
+
+  .conclusion-title {
+    font-size: 2.2rem;
+  }
+}
+
+/*=============== Design Concept Section ===============*/
+.design-quality {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: var(--body-font);
+}
+
+.design-quality h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.design-quality h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 15px;
+}
+
+.design-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 180px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-wrap: nowrap;
+}
+
+.design-container .design-item {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.design-quality .design-container .design-item p {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.design-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+/*=============== User Journey Section ===============*/
+.user-journey {
+  padding: 20px 20px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.user-journey h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.user-journey h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+/* Flowchart */
+.flowchart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+
+.flowchart .box {
+  background-color: var(--second-colour);
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 20px;
+  width: 189px;
+  text-align: center;
+  font-size: var(--h2-font-size);
+  position: relative;
+  z-index: 1;
+}
+
+.flowchart::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4.5px;
+  background-color: var(--second-colour);
+  z-index: 0;
+  top: 50px;
+  bottom: -50px;
+  transform: translateX(-50%);
+}
+
+/* Journey Steps */
+.journey-step {
+  margin-bottom: 0;
+}
+
+.step-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.step-info {
+  width: 45%;
+  text-align: left;
+}
+
+.step-info-right {
+  text-align: right;
+}
+
+.step-info .step-number,
+.vertical-info .step-number {
+  font-size: 150px;
+  color: var(--first-color);
+  font-weight: bold;
+  font-family: var(--pages-stepnumb-font);
+  line-height: 1;
+}
+
+.step-title {
+  margin-bottom: 10px;
+}
+
+.step-title h3,
+.vertical-info .step-title h3 {
+  font-size: var(--zh-font-size);
+  color: var(--first-color);
+  font-family: var(--name-font);
+  margin-bottom: 5px;
+}
+
+.step-title h4,
+.vertical-info .step-title h4 {
+  font-size: var(--en-font-size);
+  color: var(--first-color);
+  font-family: var(--name-font);
+  font-weight: normal;
+}
+
+.step-description,
+.vertical-info .step-description {
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+  margin-bottom: 20px;
+}
+
+.step-image {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-image img {
+  max-width: 200px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+
+/* Vertical Layout for Steps 3 and 4 */
+.vertical-layout .step-content {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vertical-layout .step-info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.vertical-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.title-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.vertical-info .step-description {
+  text-align: left;
+  margin: 0;
+}
+
+/* Left and Right Image Layouts */
+.left-image .step-content,
+.right-image .step-content {
+  flex-direction: row;
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+/* Task Layout specific styles */
+.task-layout {
+  padding: 20px 0;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+/* Number styling - positioned on top by itself */
+.task-number {
+  font-size: 150px;
+  color: var(--first-color);
+  font-weight: bold;
+  font-family: var(--pages-stepnumb-font);
+  line-height: 0.8;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Horizontal layout for title and description */
+.task-content-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Title styling */
+.task-title {
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.task-title h3 {
+  font-size: 28px;
+  color: #f7878e;
+  font-family: Arial, sans-serif;
+  margin-bottom: 5px;
+}
+
+.task-title h4 {
+  font-size: 22px;
+  color: #f7878e;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+}
+
+/* Description styling */
+.task-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin: 0;
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .task-content-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .task-number {
+    text-align: center;
+    width: 100%;
+  }
+
+  .task-title {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .task-description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-number {
+    font-size: 72px;
+  }
+}
+
+/*=============== other journey ===============*/
+.other-journey-container {
+  font-family: var(--body-font);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.other-journey-container .status-label {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: var(--h2-font-size);
+}
+
+.pet-status,
+.other-functions,
+.mini-game {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.pet-status-title,
+.other-functions-title {
+  font-family: var(--name-font);
+  color: var(--first-color);
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.pet-status-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+
+.pet-status-card {
+  text-align: center;
+}
+
+.pet-image {
+  width: auto;
+  max-height: 200px;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pet-image img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 150px;
+}
+
+.status-description {
+  font-size: var(--normal-font-size);
+  line-height: 1.4;
+  color: var(--content-colour);
+  margin: 0;
+}
+
+/* other-function */
+.other-functions {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.other-functions-title {
+  font-family: var(--name-font);
+  color: var(--first-color);
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.two-functions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+  flex-wrap: nowrap;
+  gap: 200px;
+}
+
+.two-function {
+  width: 300px;
+  text-align: center
+}
+
+.function-phone-img {
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.function-phone-img img {
+  width: auto;
+  height: 357px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.other-functions h3,
+.mini-game h3 {
+  font-family: var(--body-font);
+  font-weight: 500;
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .two-functions {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 50px;
+  }
+
+  .function-phone-img {
+    height: 350px;
+  }
+
+  .other-functions-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .function-phone-img {
+    height: 300px;
+  }
+
+  .two-function {
+    width: 250px;
+  }
+
+  .other-functions-title {
+    font-size: 32px;
+  }
+}
+
+/*=============== stacked-four-phones ===============*/
+.stacked-four-phones {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 40px 0px 80px;
+}
+
+.stacked-four-phones img {
+  position: relative;
+}
+
+.stacked-four-phones .phone {
+  margin-right: -30px;
+}
+
+.stacked-four-phones .phone:nth-child(1),
+.stacked-four-phones .phone:nth-child(3),
+.stacked-four-phones .phone:nth-child(5) {
+  transform: translateY(0px);
+}
+
+.stacked-four-phones .phone:nth-child(2),
+.stacked-four-phones .phone:nth-child(4) {
+  transform: translateY(60px);
+}
+
+.stacked-four-phones .phone:nth-child(1) {
+  z-index: 3;
+}
+
+.stacked-four-phones .phone:nth-child(2) {
+  z-index: 2;
+}
+
+.stacked-four-phones .phone:nth-child(3) {
+  z-index: 1;
+}
+
+.stacked-four-phones .phone:nth-child(4) {
+  z-index: 0;
+}
+
+/*=============== double-phone ===============*/
+.double-phone {
+  flex: 1;
+  position: relative;
+  text-align: right;
+}
+
+.double-phone img {
+  max-width: 180px;
+}
+
+.double-phone img:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.double-phone img:last-child {
+  position: absolute;
+  left: 1px;
+  top: -70px;
+  z-index: 0;
+}
+
+/*=============== double-phone2 ===============*/
+.double-phone2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 400px;
+  margin-bottom: 90px;
+}
+
+/* Styling for the images inside double-phone2 */
+.double-phone2 img {
+  max-width: 180px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  position: absolute;
+}
+
+/* First phone (left) */
+.double-phone2 img:first-child {
+  transform: rotate(-11.18deg);
+  left: 0;
+  z-index: 1;
+}
+
+/* Second phone (right) */
+.double-phone2 img:last-child {
+  transform: rotate(14.71deg);
+  right: 40px;
+  top: 100px;
+  z-index: 0;
+}
+
+/*=============== three-phone ===============*/
+.three-phone {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 90px;
+}
+
+.three-phone .phone {
+  position: relative;
+}
+
+.three-phone .phone:nth-child(1) {
+  z-index: 1;
+  left: 90px;
+}
+
+.three-phone .phone:nth-child(2) {
+  z-index: 2;
+  top: 80px;
+}
+
+.three-phone .phone:nth-child(3) {
+  z-index: 1;
+  right: 90px;
+}
+
+/*=============== striped-three-phone ===============*/
+.striped-three-phone {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 120px;
+  gap: 20px;
+}
+
+.striped-three-phone .phone {
+  position: relative;
+}
+
+.striped-three-phone .phone img {
+  width: auto;
+  height: 731px;
+}
+
+.striped-three-phone .phone:nth-child(1),
+.striped-three-phone .phone:nth-child(3) {
+  z-index: 1;
+
+}
+
+.striped-three-phone .phone:nth-child(2) {
+  top: 90px;
+}
+
+/*=============== four-phones ===============*/
+.mini-game .four-phones {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 80px;
+  gap: 15px;
+  width: 75%;
+}
+
+.mini-game .four-phones .phone {
+  position: relative;
+}
+
+.mini-game .four-phones .phone:nth-child(1) {
+  z-index: 3;
+}
+
+.mini-game .four-phones .phone:nth-child(2) {
+  z-index: 2;
+  top: 60px;
+}
+
+.mini-game .four-phones .phone:nth-child(3) {
+  z-index: 1;
+}
+
+.mini-game .four-phones .phone:nth-child(4) {
+  z-index: 0;
+  top: 60px;
+}
+
+
+/*===============Booth Section ===============*/
+.booth {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: var(--body-font);
+}
+
+.booth-container {
+  margin-top: 120px;
+}
+
+.booth h2 {
+  font-size: 50px;
+  color: var(--first-color);
+  margin-bottom: 30px;
+  font-family: var(--name-font);
+  text-align: left;
+}
+
+.booth h2 .step-number {
+  font-size: var(--name-font-size);
+  color: var(--first-color);
+  margin-right: 10px;
+}
+
+.booth p {
+  margin: 60px auto;
+  width: 75%;
+  font-size: var(--normal-font-size);
+  color: var(--content-colour);
+}

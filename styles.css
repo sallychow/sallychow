@@ -1,6 +1,7 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
@@ -13,20 +14,36 @@
   --second-colour: #209294;
   --content-colour: #5F4842;
   --white-color: #FFFFFF;
-
+  --black-color: #000;
+  --orange-color: #FF9700;
 
   /*========== Font and typography ==========*/
   --body-font: "Roboto Condensed", sans-serif;
   --name-font: "Jockey One", sans-serif;
   --name-biggest-font-size: 6.25rem;
   --name-font-size: 5rem;
+  /* 80px (5 * 16) */
   --h1-font-size: 1.875rem;
+  /* 30px (1.875 * 16) */
   --h2-font-size: 1.563rem;
+  /* 25px (1.563 * 16, rounded) */
   --normal-font-size: 1.25rem;
+  /* 20px (1.25 * 16) */
 
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
+
+  /*========== Image sizes ==========*/
+  --tool-icon-size: 61.83px;
+  --institution-logo-height: 48px;
+  --icon-size: 93.66px;
+  /* Added for the design step icons */
+
+  /*========== pages_font_size ==========*/
+  --zh-font-size: 45px;
+  --en-font-size: 40px;
+  --pages-stepnumb-font: "DM Sans", sans-serif;
 }
 
 /* @media screen and (min-width: 968px) {
@@ -60,13 +77,13 @@ body {
   color: var(--first-color);
 }
 
-h1,
+/* h1,
 h2,
 h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   font-family: var(--title-font);
-}
+} */
 
 ul {
   list-style: none;
@@ -110,6 +127,27 @@ input {
   padding-right: 5%;
 }
 
+/*=============== HR CLASSES ===============*/
+.break-line {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.hr1 {
+  border: none;
+  /* Remove default HR styling */
+  border-top: 5px solid var(--second-colour);
+  /* Use --second-colour (#209294) */
+  width: 670px;
+  /* Keep the specified width */
+  margin: 0 auto;
+  /* Center the HR horizontally */
+  opacity: 1;
+  /* Ensure no fading */
+  filter: none;
+  /* Ensure no blur */
+}
 
 /*=============== HEADER ===============*/
 .header {
@@ -209,7 +247,8 @@ input {
 
 /*=============== Information Section===============*/
 .personal-info {
-  max-width: 150%;
+  margin-top: 160px;
+  margin-bottom: 120px;
   width: 100%;
 }
 
@@ -218,66 +257,70 @@ input {
   padding-top: 50px;
 }
 
-.cartoon_photo,
-.real_photo {
-  width: 364.27px;
-  height: 451.59px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
+/* Fix the photo container positioning */
 .photo-left {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 500px;
+  /* Adjust based on your photo size */
+}
 
+/* Fix the photo positioning */
+.cartoon_photo,
+.real_photo {
+  width: 364.27px;
+  height: 451.59px;
+  position: absolute;
+  transition: all 0.4s ease;
 }
 
 .cartoon_photo {
   z-index: 2;
-  transform: translate(-10%, -50%);
-  transition: all 0.4s ease
+  transform: rotate(0deg);
+  left: 220px;
+  transition: all 0.6s ease
 }
 
 .real_photo {
   z-index: 1;
-  transform: translate(-50%, -50%) rotate(-19deg);
-  transition: all 0.4s ease
+  transform: rotate(-19deg);
+  right: 350px;
+  transition: all 0.6s ease
 }
 
-.photo-left {
-  position: relative;
-  margin: 0 auto;
-  width: 500px;
-  height: 500px;
-
-  &:hover {
-    .cartoon_photo {
-      z-index: 1;
-      transform: translate(-50%, -50%) rotate(-19deg);
-      transition: all 0.4s ease
-    }
-
-    .real_photo {
-      z-index: 2;
-      transform: translate(-10%, -50%);
-      transition: all 0.4s ease
-    }
-  }
+/* Fix the hover effect */
+.photo-left:hover .cartoon_photo {
+  z-index: 1;
+  transform: rotate(-19deg);
+  left: -65px;
 }
 
+.photo-left:hover .real_photo {
+  z-index: 2;
+  transform: rotate(0deg);
+  left: 220px;
+}
 
-.info-righ {
+/* Fix the typo in info-right */
+.info-right {
   width: 622.91px;
-  padding-left: 0;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .text-card {
-  width: 687.09px;
+  width: 100%;
   color: #F08E92;
+}
 
+/* Center the row vertically */
+.image-container .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-header h1 {
@@ -336,7 +379,6 @@ input {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  /* 防止縮小 */
 }
 
 .skill-item span {
@@ -362,25 +404,24 @@ input {
   background-color: #209294;
   border-radius: 5px;
   width: 0;
-  /* Start at 0% */
-  animation: progressAnimation 2s ease forwards;
+  transition: width 1s ease-out;
 }
 
-@keyframes progressAnimation {
-  from {
-    width: 0%;
-  }
+.progress.fill {
+  width: var(--progress-width);
+}
 
-  to {
-    width: var(--progress-width);
-    /* Use the custom property */
-  }
+.progress.empty {
+  width: 0;
+}
+
+.skillandqr {
+  align-items: center;
 }
 
 .qr-code {
   margin: 20px 0;
   text-align: center;
-
 }
 
 .qr-image {
@@ -410,18 +451,527 @@ input {
   transition: opacity 0.3s ease;
 }
 
-.skillandqr {
-  align-items: center;
-}
-
 .software {
   display: flex;
   justify-content: flex-start;
   gap: 14px;
-
 }
 
 .software-icon {
   width: 63.92px;
   height: 63.92px;
+}
+
+/*=============== DISCOVER Swiper-slide Section===============*/
+.discover__title {
+  text-align: center;
+}
+
+.discover__title p {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/* Container styling (optional, adjust as needed) */
+.discover__container {
+  width: 100%;
+  padding: 20px;
+
+}
+
+/* Slide styling */
+.swiper-slide {
+  width: 300px;
+  /* Fixed width for each slide (adjust based on your design) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styling */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.swiper-slide-active {
+  transform: scale(1.1);
+  /* Slightly scales up the active slide */
+}
+
+.collaborating-organization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/*=============== other-works Swiper-slide Section===============*/
+/* .other_work {}
+
+.marquee {
+    overflow: hidden; 
+} */
+
+.marquee-content {
+  display: flex;
+  animation: scrolling 30s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 20vw;
+  /*   margin: 0 2vw; */
+}
+
+.marquee-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translatex(-140vw);
+  }
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.text-strip {
+  background-color: var(--first-color);
+  color: white;
+  font-family: var(--body-font);
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text-strip-green {
+  background-color: var(--second-colour);
+  color: white;
+  font-family: var(--body-font);
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Style the strip text and create the repeating effect */
+.strip-text {
+  white-space: nowrap;
+}
+
+/* Repeat the text using ::before */
+.strip-text::before {
+  content: "OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS OTHER WORKS";
+  display: inline-block;
+}
+
+/*===============my mission Section===============*/
+.my_mission {
+  margin: 100px 0;
+}
+
+.my_mission__title {
+  text-align: center;
+}
+
+.my_mission__title p {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/* 容器樣式 */
+.mission-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 每個group的樣式 */
+.mission-group {
+  display: flex;
+  flex-direction: row;
+  /* 改為水平排列 */
+  width: 400px;
+  /* 固定每個group的寬度 */
+  align-items: center;
+  /* 垂直置中 */
+  gap: 20px;
+  /* 圖標和文字之間的間距 */
+}
+
+/* 圖標容器 */
+.mission-icon-wrapper {
+  flex-shrink: 0;
+  /* 防止圖標縮小 */
+  width: 144px;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 圖標樣式 */
+.mission-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 文字內容容器 */
+.mission-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* 標題和描述之間的間距 */
+}
+
+/* 標題樣式 */
+.mission-title {
+  font-family: var(--body-font);
+  font-size: var(--h1-font-size);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 描述文字樣式 */
+.mission-description {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 顏色設置 */
+.ui-ux {
+  color: var(--second-colour);
+}
+
+.design-creative {
+  color: var(--first-color);
+}
+
+/* UI/UX 描述文字顏色 */
+.mission-group:first-child .mission-description {
+  color: var(--second-colour);
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 144px 250px 144px 250px;
+  /* 固定兩邊文字區域寬度為250px */
+  grid-template-rows: auto auto;
+  gap: 40px;
+  /* 增加間距使布局更平衡 */
+  max-width: 900px;
+  /* 設置最大寬度確保整體布局合適 */
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  /* 水平置中 */
+}
+
+/* 左側UI/UX圖標 */
+.div1 {
+  grid-row: 1 / 3;
+  grid-column: 1;
+  justify-self: center;
+  /* 圖標水平置中 */
+  align-self: center;
+  /* 圖標垂直置中 */
+}
+
+/* UI/UX標題 */
+.div2 {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: flex-end;
+  text-align: center;
+  /* 文字置中 */
+}
+
+/* UI/UX描述 */
+.div3 {
+  grid-row: 2;
+  grid-column: 2;
+  align-self: flex-start;
+  text-align: center;
+  /* 文字置中 */
+}
+
+/* 右側Design圖標 */
+.div4 {
+  grid-row: 1 / 3;
+  grid-column: 3;
+  justify-self: center;
+  /* 圖標水平置中 */
+  align-self: center;
+  /* 圖標垂直置中 */
+}
+
+/* Design標題 */
+.div5 {
+  grid-row: 1;
+  grid-column: 4;
+  align-self: flex-end;
+  text-align: center;
+  /* 文字置中 */
+}
+
+/* Design描述 */
+.div6 {
+  grid-row: 2;
+  grid-column: 4;
+  align-self: flex-start;
+  text-align: center;
+  /* 文字置中 */
+}
+
+/* 調整圖標樣式 */
+.mission-icon {
+  width: 144px;
+  height: 144px;
+  display: block;
+  object-fit: contain;
+}
+
+/* 調整標題樣式 */
+.mission-title {
+  font-family: var(--body-font);
+  font-size: var(--h1-font-size);
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+  /* 增加與描述的間距 */
+}
+
+/* 調整描述文字樣式 */
+.mission-description {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 250px;
+  /* 確保文字不會超出預設寬度 */
+}
+
+.div3 {
+  color: var(--second-colour);
+}
+
+/*=============== clickme Section===============*/
+
+/* Click Me Section 樣式 */
+.clickme {
+  padding: 50px 0;
+  position: relative;
+}
+
+.clickme-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clickme-animation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.clickme-state {
+  display: none;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.clickme-state.active {
+  display: block;
+  /* 改為 block，因為我們不再需要 flex 來水平排列 */
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  /* 讓圖片和聯繫信息整體居中 */
+}
+
+.character-img {
+  max-width: 300px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.character-img:hover {
+  transform: scale(1.05);
+}
+
+/* 對話氣泡樣式 */
+.speech-bubble {
+  position: absolute;
+  top: -80px;
+  left: calc(50% + 150px);
+  /* 圖片在右邊，對話框位置不變 */
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid var(--first-color);
+  border-radius: 20px;
+  padding: 15px 20px;
+  max-width: 300px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.speech-bubble p {
+  margin: 0;
+  color: var(--content-colour);
+  font-size: var(--normal-font-size);
+}
+
+/* 箭頭按鈕樣式 */
+.arrow-button {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 40px;
+  height: 40px;
+  background: var(--first-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow-button i {
+  color: white;
+  font-size: 20px;
+}
+
+.arrow-button:hover {
+  transform: scale(1.1);
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) translateX(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* 修改聯繫信息樣式 */
+.contact-info {
+  position: absolute;
+  bottom: 0;
+  /* 定位到底部 */
+  left: -200px;
+  /* 緊貼圖片左邊，根據實際寬度調整 */
+  width: 200px;
+  /* 設置固定寬度，根據需要調整 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* 左對齊 */
+}
+
+.contact-item {
+  display: flex;
+  gap: 10px;
+  color: var(--first-color);
+  font-size: var(--normal-font-size);
+}
+
+.contact-item i {
+  font-size: 24px;
+}
+
+.contact-item span {
+  font-family: var(--body-font);
+}
+
+/*=============== footer Section===============*/
+.footer {
+  background-color: var(--second-colour);
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright {
+  color: var(--white-color);
+  font-family: var(--body-font);
+  font-size: 20px;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.footer-link {
+  color: var(--white-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--white-color);
+  text-decoration: underline;
+}
+
+/* Vertical line between steps */
+.vertical-line {
+  width: 4.5px;
+  height: 152px;
+  background-color: var(--second-colour);
+  margin: 100px auto;
+  z-index: -1;
 }
