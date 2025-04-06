@@ -195,26 +195,18 @@ input {
 
 /*=============== HEADER Section===============*/
 .home {
-  position: relative;
-  /* Ensures the image can be positioned within this section */
+  position: flex;
   width: 100%;
-  /* Full width of the viewport */
-  height: 100vh;
-  /* Full height of the viewport */
-  overflow: hidden;
-  /* Prevents overflow if the image exceeds bounds */
+  height: auto;
   padding: 0;
-  /* Removes any padding that might cause white space */
+  padding-bottom: 100vh;
 }
 
 .home_img {
   width: 100%;
-  /* Fills the width of the container */
   height: 100%;
   object-fit: cover;
-  /* Scales the image to cover the container, cropping if necessary */
   position: absolute;
-  /* Positions the image to fill the section */
   top: 0;
   left: 0;
 }
@@ -233,7 +225,6 @@ input {
   font-family: var(--name-font);
   font-weight: bold;
   color: var(--first-color);
-  /* Matches the pink color from the image */
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 
@@ -242,7 +233,6 @@ input {
 .hero-subtitle {
   font-size: var(--h1-font-size);
   color: var(--second-colour);
-  /* White color for the subtitle */
 }
 
 /*=============== Information Section===============*/
@@ -250,6 +240,8 @@ input {
   margin-top: 160px;
   margin-bottom: 120px;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .image-container {
@@ -463,6 +455,10 @@ input {
 }
 
 /*=============== DISCOVER Swiper-slide Section===============*/
+.discover{
+  margin-top: 160px;
+}
+
 .discover__title {
   text-align: center;
 }
@@ -505,7 +501,7 @@ input {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 /*=============== other-works Swiper-slide Section===============*/
