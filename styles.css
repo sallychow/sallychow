@@ -240,7 +240,7 @@ input {
   margin-top: 160px;
   margin-bottom: 120px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 
@@ -297,15 +297,14 @@ input {
 
 /* Fix the typo in info-right */
 .info-right {
-  width: 622.91px;
-  padding-left: 20px;
+  width: 700px;
   display: flex;
   align-items: center;
 }
 
 .text-card {
   width: 100%;
-  color: #F08E92;
+  color: var(--first-color);
 }
 
 /* Center the row vertically */
@@ -318,7 +317,7 @@ input {
 .text-header h1 {
   font-size: var(--name-font-size);
   font-family: var(--name-font);
-  color: #F08E92;
+  color: var(--first-color);
 }
 
 .text-header p {
@@ -350,7 +349,6 @@ input {
 
 .skills {
   background-color: var(--white-color);
-  padding: 10px;
 }
 
 .skill-icon {
@@ -375,11 +373,11 @@ input {
 
 .skill-item span {
   font-size: var(--h2-font-size);
-  margin-left: 5px;
+  margin-left: 6px;
 }
 
 .skill-item-icon {
-  font-size: 27px;
+  font-size: var(--h2-font-size);
 }
 
 .progress-bar {
@@ -455,7 +453,7 @@ input {
 }
 
 /*=============== DISCOVER Swiper-slide Section===============*/
-.discover{
+.discover {
   margin-top: 160px;
 }
 
@@ -898,30 +896,27 @@ input {
   }
 }
 
-/* 修改聯繫信息樣式 */
 .contact-info {
   position: absolute;
   bottom: 0;
-  /* 定位到底部 */
   left: -200px;
-  /* 緊貼圖片左邊，根據實際寬度調整 */
   width: 200px;
-  /* 設置固定寬度，根據需要調整 */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* 左對齊 */
 }
 
 .contact-item {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   color: var(--first-color);
   font-size: var(--normal-font-size);
 }
 
 .contact-item i {
-  font-size: 24px;
+  font-size: var(--normal-font-size);
 }
 
 .contact-item span {
