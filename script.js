@@ -1,3 +1,34 @@
+const thumb = document.getElementById("characterThumb");
+const container = document.querySelector(".scrollbar-container");
+
+if (!/webkit/i.test(navigator.userAgent)) {
+  thumb.style.display = "block";
+
+  window.addEventListener("scroll", function () {
+    const scrollPercentage =
+      window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    const thumbPosition =
+      scrollPercentage * (container.clientHeight - thumb.clientHeight);
+    thumb.style.top = thumbPosition + "px";
+  });
+
+  // Override Page Up and Page Down to scroll to appropriate positions
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "PageUp") {
+      event.preventDefault();
+      window.scrollBy({
+        top: -window.innerHeight * 0.9,
+        behavior: "smooth",
+      });
+    } else if (event.key === "PageDown") {
+      event.preventDefault();
+      window.scrollBy({
+        top: window.innerHeight * 0.9,
+        behavior: "smooth",
+      });
+    }
+  });
+}
 // JavaScript to toggle mobile menu
 document.addEventListener("DOMContentLoaded", function () {
   // Get the hamburger checkbox, nav menu, and backdrop
