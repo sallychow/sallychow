@@ -21,26 +21,40 @@
 </head>
 
 <body>
+  <div class="scrollbar-container">
+    <div class="scrollbar-thumb" id="characterThumb"></div>
+  </div>
   <!--=========================== Header ==============================-->
   <header class="header" id="header">
-    <nav class="nav ">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#home" class="nav__link">Home</a>
-        </li>
-        <li class="nav__item">
-          <a href="#about" class="nav__link">About</a>
-        </li>
-        <li class="nav__item">
-          <a href="#projects" class="nav__link">Projects</a>
-        </li>
-        <li class="nav__item">
-          <a href="#survices" class="nav__link">Survices</a>
-        </li>
-        <li class="nav__item">
-          <a href="#contact" class="nav__link">Contact</a>
-        </li>
-      </ul>
+    <nav class="nav">
+      <input id="burger-checkbox" class="nav__toggle" type="checkbox" />
+      <label class="burger" for="burger-checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- Backdrop for menu -->
+      <div class="nav__backdrop"></div>
+      <!-- Menu -->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <!--=========================== Main ==============================-->
@@ -53,13 +67,6 @@
         <p class="hero-subtitle">A girl who is cheerful and conscientious</p>
       </div>
     </section>
-    <!-- Notice overlay -->
-    <div class="notice-overlay" id="notice-overlay">
-      <div class="notice-content">
-        <h1>Notice</h1>
-        <p>Until this is fully supported, please use the PC web browser.</p>
-      </div>
-    </div>
     <!--========================Personal Information Section==========================-->
     <section class="personal-info" id="about">
       <div class="image-container container">
@@ -85,7 +92,7 @@
                       <i class="fa-solid fa-face-laugh-beam skill-item-icon"></i><span>Cheerful</span>
                     </div>
                     <div class="progress-bar">
-                      <div class="progress" style="--progress-width: 80%;"></div>
+                      <div class="progress" style="--progress-width: 60%;"></div>
                     </div>
                   </div>
                   <div class="skill-item">
@@ -93,7 +100,7 @@
                       <i class="fa-solid fa-circle-question skill-item-icon"></i><span>Curious</span>
                     </div>
                     <div class="progress-bar">
-                      <div class="progress" style="--progress-width: 70%;"></div>
+                      <div class="progress" style="--progress-width: 80%;"></div>
                     </div>
                   </div>
                   <div class="skill-item">
@@ -101,7 +108,7 @@
                       <i class="fa-solid fa-palette skill-item-icon"></i><span>Creative</span>
                     </div>
                     <div class="progress-bar">
-                      <div class="progress" style="--progress-width: 75%;"></div>
+                      <div class="progress" style="--progress-width: 63%;"></div>
                     </div>
                   </div>
                   <div class="skill-item">
@@ -109,7 +116,7 @@
                       <i class="fa-solid fa-heart skill-item-icon"></i><span>Conscientious</span>
                     </div>
                     <div class="progress-bar">
-                      <div class="progress" style="--progress-width: 85%;"></div>
+                      <div class="progress" style="--progress-width: 75%;"></div>
                     </div>
                   </div>
                   <div class="skill-item">
@@ -117,12 +124,12 @@
                       <i class="fa-solid fa-handshake-simple skill-item-icon"></i><span>Collaborative</span>
                     </div>
                     <div class="progress-bar">
-                      <div class="progress" style="--progress-width: 85%;"></div>
+                      <div class="progress" style="--progress-width: 70%;"></div>
                     </div>
                   </div>
                 </div>
                 <div class="qr-code col-md-4">
-                  <a href="https://drive.google.com/file/d/1BysqF3fEV1iSCwd5IqT-bD7nt_oFAoqT/view" target="_blank">
+                  <a href="https://drive.google.com/file/d/1Wdo9qskEPPU1tY7HtnTE_UfH6NAomlmj/view" target="_blank">
                     <img src="./assets/CV_QR Code.png" alt="QR Code" class="qr-image">
                     <p>View my CV</p>
                   </a>
@@ -207,6 +214,33 @@
           </div>
           <div class="marquee-item">
             <img src="./assets/other_works/other_works_10.png" alt="Work 10">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_9.png" alt="Work 9">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_8.png" alt="Work 8">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_7.png" alt="Work 7">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_6.png" alt="Work 6">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_5.png" alt="Work 5">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_4.png" alt="Work 4">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_3.png" alt="Work 3">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_2.png" alt="Work 2">
+          </div>
+          <div class="marquee-item">
+            <img src="./assets/other_works/other_works_1.png" alt="Work 1">
           </div>
         </div>
       </div>
