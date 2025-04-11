@@ -1,34 +1,5 @@
-const thumb = document.getElementById("characterThumb");
-const container = document.querySelector(".scrollbar-container");
 
-if (!/webkit/i.test(navigator.userAgent)) {
-  thumb.style.display = "block";
 
-  window.addEventListener("scroll", function () {
-    const scrollPercentage =
-      window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    const thumbPosition =
-      scrollPercentage * (container.clientHeight - thumb.clientHeight);
-    thumb.style.top = thumbPosition + "px";
-  });
-
-  // Override Page Up and Page Down to scroll to appropriate positions
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "PageUp") {
-      event.preventDefault();
-      window.scrollBy({
-        top: -window.innerHeight * 0.9,
-        behavior: "smooth",
-      });
-    } else if (event.key === "PageDown") {
-      event.preventDefault();
-      window.scrollBy({
-        top: window.innerHeight * 0.9,
-        behavior: "smooth",
-      });
-    }
-  });
-}
 // JavaScript to toggle mobile menu
 document.addEventListener("DOMContentLoaded", function () {
   // Get the hamburger checkbox, nav menu, and backdrop
@@ -170,3 +141,66 @@ document.addEventListener("DOMContentLoaded", () => {
     state3.classList.add("active");
   });
 });
+
+/* const thumb = document.getElementById("characterThumb");
+const container = document.querySelector(".scrollbar-container");
+
+if (!/webkit/i.test(navigator.userAgent)) {
+  thumb.style.display = "block";
+
+  window.addEventListener("scroll", function () {
+    const scrollPercentage =
+      window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    const thumbPosition =
+      scrollPercentage * (container.clientHeight - thumb.clientHeight);
+    thumb.style.top = thumbPosition + "px";
+  });
+
+  // Override Page Up and Page Down to scroll to appropriate positions
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "PageUp") {
+      event.preventDefault();
+      window.scrollBy({
+        top: -window.innerHeight * 0.9,
+        behavior: "smooth",
+      });
+    } else if (event.key === "PageDown") {
+      event.preventDefault();
+      window.scrollBy({
+        top: window.innerHeight * 0.9,
+        behavior: "smooth",
+      });
+    }
+  });
+}
+
+// Scrollbar hide/show logic (desktop only)
+const scrollbarContainer = document.querySelector('.scrollbar-container');
+const scrollbarThumb = document.querySelector('.scrollbar-thumb');
+let hideTimeout = null;
+
+function showScrollbar() {
+  if (scrollbarThumb) {
+    scrollbarThumb.classList.add('visible');
+  }
+  document.documentElement.classList.add('scrollbar-visible');
+}
+
+function hideScrollbar() {
+  if (scrollbarThumb) {
+    scrollbarThumb.classList.remove('visible');
+  }
+  document.documentElement.classList.remove('scrollbar-visible');
+}
+
+if (scrollbarContainer) {
+  scrollbarContainer.addEventListener('scroll', () => {
+    showScrollbar();
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+    }
+    hideTimeout = setTimeout(hideScrollbar, 1500);
+  });
+}
+
+hideScrollbar(); */

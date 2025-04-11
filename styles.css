@@ -121,18 +121,16 @@ input {
   margin-top: var(--header-height);
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 20px;
   background-color: transparent;
 }
 
-/* Style the scrollbar track */
 ::-webkit-scrollbar-track {
   background-color: transparent;
   border: none;
 }
 
-/* Style the scrollbar thumb with the image */
 ::-webkit-scrollbar-thumb {
   background-image: url('./assets/character.gif');
   background-size: contain;
@@ -140,6 +138,12 @@ input {
   background-position: center;
   min-height: 100px;
   background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  opacity: 1;
 }
 
 ::-webkit-scrollbar-button {
@@ -150,7 +154,6 @@ input {
   background-color: transparent;
 }
 
-/* For Firefox - requires a wrapper with overflow */
 .scrollbar-container {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
@@ -164,7 +167,6 @@ input {
   background-color: transparent;
 }
 
-/* The actual image container for Firefox */
 .scrollbar-thumb {
   width: 20px;
   height: 100px;
@@ -175,9 +177,14 @@ input {
   position: absolute;
   right: 5px;
   top: 0;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   background-color: transparent;
 }
+
+.scrollbar-thumb.visible {
+  opacity: 1;
+} */
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
