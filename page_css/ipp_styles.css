@@ -9,7 +9,7 @@
 .page_introduction {
   background-color: var(--white-color);
   padding: 40px 20px;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: left;
   font-family: var(--body-font);
@@ -39,7 +39,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 30px;
-  gap: 20px;
+  gap: 65px;
 }
 
 .page_introduction .role,
@@ -56,7 +56,7 @@
 
 .page_introduction .role p {
   font-size: var(--normal-font-size);
-  color: var(--black-color);
+  color: var(--content-colour);
 }
 
 .page_introduction .tools img {
@@ -347,7 +347,7 @@
 
 .step-info .step-number,
 .vertical-info .step-number {
-  font-size: 198px;
+  font-size: 125px;
   color: var(--first-color);
   font-weight: bold;
   font-family: var(--pages-stepnumb-font);

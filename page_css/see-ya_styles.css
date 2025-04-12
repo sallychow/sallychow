@@ -639,11 +639,12 @@
 
 .step-info-right {
   text-align: right;
+  width: 60%;
 }
 
 .step-info .step-number,
 .vertical-info .step-number {
-  font-size: 198px;
+  font-size: 125px;
   color: var(--first-color);
   font-weight: bold;
   font-family: var(--pages-stepnumb-font);

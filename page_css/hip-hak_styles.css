@@ -319,6 +319,7 @@
 .music-festival h2 .step-number {
   font-size: var(--name-font-size);
   color: var(--first-color);
+  font-family: var(--name-font);
   margin-right: 10px;
 }
 
@@ -519,7 +520,7 @@
 
 .story-title h3 {
   font-size: var(--zh-font-size);
-  color: #ff7b7b;
+  color: var(--first-color);
   /* Pink color from the image */
   font-family: var(--name-font);
   margin-bottom: 5px;
@@ -527,7 +528,7 @@
 
 .story-title h4 {
   font-size: var(--en-font-size);
-  color: #ff7b7b;
+  color: var(--first-color);
   /* Pink color from the image */
   font-family: var(--name-font);
   font-weight: normal;
@@ -636,15 +637,35 @@
   flex-direction: row-reverse;
 }
 
-/* Step Number Styling */
-.step-number {
-  font-size: 6rem;
+.journey-step .step-number {
+  font-size: 125px;
+  font-family: var(--pages-stepnumb-font);
+  color: var(--first-color);
   font-weight: bold;
-  color: #f99;
+  line-height: 1;
+}
+
+.journey-step .step-title h3 {
+  color: var(--first-color);
+  font-family: var(--name-font);
+  font-size: var(--zh-font-size);
+}
+
+.journey-step .step-title h4{
+  color: var(--first-color);
+  font-family: var(--name-font);
+  font-size: var(--en-font-size);
+}
+
+
+.music-video-step .step-number {
+  font-size: var(--name-font-size);
+  font-weight: bold;
+  color: var(--first-color);
   /* Light pink color seen in the image */
   line-height: 0.8;
   margin-bottom: 10px;
-  font-family: var(--pages-stepnumb-font);
+  font-family: var(--name-font);
 }
 
 

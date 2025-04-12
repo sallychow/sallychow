@@ -310,11 +310,11 @@
 }
 
 .feedback-left {
-  background-color: #f78a8a;
+  background-color: var(--first-color);
 }
 
 .feedback-right {
-  background-color: #2a9d8f;
+  background-color: var(--second-colour);
 }
 
 .feedback-item p {
@@ -457,8 +457,6 @@
 .product-container img {
   width: 100%;
   border: 8px solid white;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Media Queries for Responsive Design */
@@ -1053,10 +1051,13 @@
 .step-info-right {
   text-align: right;
 }
-
+.yelling{
+  gap: 10px;
+}
 .step-info .step-number,
-.vertical-info .step-number {
-  font-size: 198px;
+.vertical-info .step-number ,
+.yelling .step-number {
+  font-size: 125px;
   color: var(--first-color);
   font-weight: bold;
   font-family: var(--pages-stepnumb-font);
@@ -1480,7 +1481,7 @@
   margin-top: -40px;
   /* Negative margin to create overlap */
   left: 160px;
-  top: 70px;
+  top: 85px;
 }
 
 /* Styling for the yelling section specifically */
@@ -1498,22 +1499,22 @@
 }
 
 .journey-step.left-image .step-number {
-  font-size: 4rem;
-  color: #f98b8b;
+  font-size: 125px;
+  color: var(--first-color);
   /* Pink color from the image */
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .journey-step.left-image .step-title h3 {
-  color: #f98b8b;
+  color: var(--first-color);
   /* Pink color matching the number */
-  font-size: 2rem;
+  font-size: var(--zh-font-size);
   margin-bottom: 5px;
 }
 
 .journey-step.left-image .step-title h4 {
-  font-size: 1.8rem;
+  font-size: var(--en-font-size);
   margin-bottom: 15px;
 }
 
