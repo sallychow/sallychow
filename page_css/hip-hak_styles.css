@@ -121,7 +121,7 @@
   background-color: var(--white-color);
   padding: 90px 20px 40px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 80px auto 30px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
