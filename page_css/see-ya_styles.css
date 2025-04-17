@@ -743,6 +743,13 @@
   margin-bottom: 90px;
 }
 
+.double-phone img {
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); 柔和但濃重 1 */
+  /* box-shadow: 0 16px 32px 4px rgba(0, 0, 0, 0.5); 超大陰影，帶擴散 2 */
+  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); 更深的立體感 3 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 更大範圍、更濃的陰影 4 */
+}
+
 
 .double-phone img:first-child {
   position: relative;
